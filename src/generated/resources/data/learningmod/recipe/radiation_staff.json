@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "minecraft:emerald_block"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  E",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:radiation_staff"
+  }
+}

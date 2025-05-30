@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "learningmod:azurite_axe"
+    },
+    "P": {
+      "item": "learningmod:azurite_pickaxe"
+    },
+    "S": {
+      "item": "learningmod:azurite_shovel"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "ASP",
+    " s ",
+    " s "
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:azurite_paxel"
+  }
+}

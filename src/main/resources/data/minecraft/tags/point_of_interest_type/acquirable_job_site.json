@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "learningmod:magic_poi",
+      "required": false
+    }
+  ]
+}

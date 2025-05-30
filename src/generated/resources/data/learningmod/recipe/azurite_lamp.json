@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "learningmod:azurite"
+    },
+    "R": {
+      "item": "minecraft:redstone_lamp"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "ARA",
+    "AAA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:azurite_lamp"
+  }
+}

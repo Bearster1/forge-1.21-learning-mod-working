@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "learningmod:onion"
+    }
+  },
+  "pattern": [
+    "   ",
+    " O ",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:onion_seeds"
+  }
+}

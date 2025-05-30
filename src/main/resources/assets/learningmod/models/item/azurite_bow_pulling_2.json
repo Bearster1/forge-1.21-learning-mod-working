@@ -1,0 +1,6 @@
+{
+    "parent": "learningmod:item/azurite_bow",
+    "textures": {
+        "layer0": "learningmod:item/azurite_bow_pulling_2"
+    }
+}

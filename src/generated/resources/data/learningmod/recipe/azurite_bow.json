@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "learningmod:azurite"
+    },
+    "S": {
+      "item": "minecraft:string"
+    }
+  },
+  "pattern": [
+    " AS",
+    "A S",
+    " AS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:azurite_bow"
+  }
+}

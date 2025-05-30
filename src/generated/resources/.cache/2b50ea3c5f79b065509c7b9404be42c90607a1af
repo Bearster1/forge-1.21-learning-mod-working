@@ -1,0 +1,8 @@
+// 1.21.1	2025-05-30T16:23:41.4797204	Tags for minecraft:item mod id learningmod
+403e3c112a992d3dc42767bc4ea8a224c353a671 data/learningmod/tags/item/balsa_wood.json
+c9cb754d3b3270f7b1ff60a03c0534be0892d6cb data/learningmod/tags/item/transformable_items.json
+403e3c112a992d3dc42767bc4ea8a224c353a671 data/minecraft/tags/item/logs_that_burn.json
+3103d235773cd523b4f84ba4df41191e20289392 data/minecraft/tags/item/planks.json
+8262716e6074f880f6d4e8abafbf25ff629cb627 data/minecraft/tags/item/trimmable_armor.json
+1a7da0b168a1c844e953769d37fda1374d1df3a0 data/minecraft/tags/item/trim_materials.json
+22c7c66dffeaa5a6149d900c0db8e6f3aee58f1e data/minecraft/tags/item/trim_templates.json

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "T": {
+      "item": "learningmod:triforce"
+    }
+  },
+  "pattern": [
+    "I  ",
+    " I ",
+    "  T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:sword"
+  }
+}

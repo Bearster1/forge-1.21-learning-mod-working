@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "learningmod:aurora_ashes"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  A",
+    " S ",
+    "S  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:spectre_staff"
+  }
+}

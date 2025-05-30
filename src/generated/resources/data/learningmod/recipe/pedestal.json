@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "minecraft:smooth_stone"
+    },
+    "s": {
+      "tag": "c:stones"
+    }
+  },
+  "pattern": [
+    "SSS",
+    " s ",
+    "sss"
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:pedestal"
+  }
+}

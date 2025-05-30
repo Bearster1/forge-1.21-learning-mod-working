@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "learningmod:block/azurite_pressure_plate"
+    },
+    "powered=true": {
+      "model": "learningmod:block/azurite_pressure_plate_down"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "azurite",
+  "ingredient": {
+    "item": "learningmod:azurite_ore"
+  },
+  "result": {
+    "id": "learningmod:azurite"
+  }
+}

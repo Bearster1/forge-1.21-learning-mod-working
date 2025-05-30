@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aurora_ashes": {
+      "conditions": {
+        "items": [
+          {
+            "items": "learningmod:aurora_ashes"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "learningmod:spectre_staff"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aurora_ashes"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "learningmod:spectre_staff"
+    ]
+  }
+}

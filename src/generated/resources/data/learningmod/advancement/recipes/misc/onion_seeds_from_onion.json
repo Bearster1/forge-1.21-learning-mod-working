@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_onion": {
+      "conditions": {
+        "items": [
+          {
+            "items": "learningmod:onion"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "learningmod:onion_seeds_from_onion"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_onion"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "learningmod:onion_seeds_from_onion"
+    ]
+  }
+}

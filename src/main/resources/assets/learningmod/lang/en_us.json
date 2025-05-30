@@ -1,0 +1,154 @@
+{
+  "item.learningmod.azurite": "Azurite",
+  "item.learningmod.raw_azurite": "Raw Azurite",
+  "item.learningmod.chainsaw": "Chainsaw",
+  "item.learningmod.lightsaber": "Lightsaber",
+  "item.learningmod.onion": "Onion",
+  "item.learningmod.aurora_ashes": "Aurora Ashes",
+
+  "item.learningmod.azurite_sword": "Azurite Sword",
+  "item.learningmod.azurite_pickaxe": "Azurite Pickaxe",
+  "item.learningmod.azurite_shovel": "Azurite Shovel",
+  "item.learningmod.azurite_axe": "Azurite Axe",
+  "item.learningmod.azurite_hoe": "Azurite Hoe",
+
+  "item.learningmod.azurite_paxel": "Azurite Paxel",
+
+  "item.learningmod.azurite_hammer": "Azurite Hammer",
+
+  "item.learningmod.azurite_helmet": "Azurite Helmet",
+  "item.learningmod.azurite_chestplate": "Azurite Chestplate",
+  "item.learningmod.azurite_leggings": "Azurite Leggings",
+  "item.learningmod.azurite_boots": "Azurite Boots",
+
+  "item.learningmod.azurite_horse_armor": "Azurite Horse Armor",
+
+  "item.learningmod.kaupen_armor_trim_smithing_template": "Kaupen Trim Template",
+
+  "item.learningmod.metal_detector": "Metal Detector",
+  "item.learningmod.data_tablet": "Data Tablet",
+
+  "item.learningmod.azurite_bow": "Azurite Bow",
+
+  "item.learningmod.onion_seeds": "Onion Seeds",
+
+  "item.learningmod.bar_brawl_music_disc": "Bar Brawl Music Disc",
+  "item.learningmod.bar_brawl_music_disc.desc": "Bryan Tech - Bar Brawl (CC0)",
+
+  "item.learningmod.j0j0jetz_club_music_disc": "J0J0Jetz Club Music Disc",
+  "item.learningmod.j0j0jetz_club_music_disc.desc": "J0J0Jetz - J0J0Jetz Club",
+
+  "item.learningmod.spectre_staff": "Spectre Staff",
+  "item.learningmod.radiation_staff": "Radiation Staff",
+  "item.learningmod.sword": "Sword",
+  "item.learningmod.tomahawk": "Tomahawk",
+
+  "item.learningmod.capybara_spawn_egg": "Capybara Spawn Egg",
+  "item.learningmod.firefighter_spawn_egg": "Firefighter Spawn Egg",
+
+  "item.learningmod.giraffe_spawn_egg": "Giraffe Spawn Egg",
+  "item.learningmod.fire_truck_spawn_egg": "Fire Truck Spawn Egg",
+
+  "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
+  "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
+  "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",
+
+  "item.learningmod.azurite_water_bucket": "Azurite Water Bucket",
+  "fluid_type.learningmod.azurite_water_fluid": "Azurite Water",
+
+  "block.learningmod.azurite_block": "Block of Azurite",
+  "block.learningmod.azurite_ore": "Azurite Ore",
+  "block.learningmod.azurite_deepslate_ore": "Azurite Deepslate Ore",
+  "block.learningmod.azurite_nether_ore": "Azurite Nether Ore",
+  "block.learningmod.azurite_end_ore": "Azurite End Ore",
+
+  "block.learningmod.magic_block": "Magic Block",
+
+  "block.learningmod.azurite_stairs": "Azurite Stairs",
+  "block.learningmod.azurite_slab": "Azurite Slab",
+  "block.learningmod.azurite_button": "Azurite Button",
+  "block.learningmod.azurite_pressure_plate": "Azurite Pressure Plate",
+  "block.learningmod.azurite_fence": "Azurite Fence",
+  "block.learningmod.azurite_fence_gate": "Azurite Fence Gate",
+  "block.learningmod.azurite_wall": "Azurite Wall",
+  "block.learningmod.azurite_door": "Azurite Door",
+  "block.learningmod.azurite_trapdoor": "Azurite Trapdoor",
+
+  "block.learningmod.azurite_lamp": "Azurite Lamp",
+
+  "block.learningmod.onion_crop": "Onion Crop",
+
+  "block.learningmod.catmint": "Catmint",
+  "block.learningmod.potted_catmint": "Potted Catmint",
+
+  "block.learningmod.colored_leaves": "Colored Leaves",
+
+  "block.learningmod.pedestal": "Pedestal",
+  "block.learningmod.triforce": "Triforce",
+
+  "block.learningmod.crystallizer": "Crystallizer",
+
+  "block.learningmod.balsa_log": "Balsa Log",
+  "block.learningmod.balsa_wood": "Balsa Wood",
+  "block.learningmod.stripped_balsa_log": "Stripped Balsa Log",
+  "block.learningmod.stripped_balsa_wood": "Stripped Balsa Wood",
+  "block.learningmod.balsa_planks": "Balsa Planks",
+  "block.learningmod.balsa_leaves": "Balsa Leaves",
+  "block.learningmod.balsa_sapling": "Balsa Sapling",
+
+  "block.learningmod.coal_generator": "Coal Generator",
+
+
+  "effect.learningmod.slimey": "Slimey",
+
+  "painting.learningmod.world.title": "World",
+  "painting.learningmod.world.author": "NanoAttack",
+  "painting.learningmod.shrimp.title": "Shrimp",
+  "painting.learningmod.shrimp.author": "NanoAttack",
+  "painting.learningmod.saw_them.title": "Saw Them",
+  "painting.learningmod.saw_them.author": "NanoAttack",
+  "painting.learningmod.wanderer.title": "Wanderer",
+  "painting.learningmod.wanderer.author": "PlatinumG17",
+
+  "painting.learningmod.jojo_botw.title": "J0J0Jetz in BOTW",
+  "painting.learningmod.jojo_botw.author": "J0J0Jetz",
+
+  "painting.learningmod.jojo_knight.title": "J0J0Jetz Getting Knighted",
+  "painting.learningmod.jojo_knight.author": "HobbyBox",
+
+  "creativetab.azurite_items": "Azurite Items",
+  "creativetab.azurite_blocks": "Azurite Blocks",
+  "creativetab.custom": "Custom Tab",
+
+  "trim_pattern.learningmod.kaupen": "Kaupen Armor Trim",
+  "trim_material.learningmod.azurite": "Azurite Material",
+
+  "entity.minecraft.villager.learningmod.kaupenger": "Kaupenger",
+
+  "enchantment.learningmod.lightning_striker": "Lightning Striker",
+
+  "sounds.learningmod.chainsaw_cut": "Chainsaw Sounds",
+  "sounds.learningmod.chainsaw_pull": "Pull Chainsaw Sounds",
+
+  "sounds.learningmod.firefighter": "Firefighter Sounds",
+
+  "tooltip.learningmod.chainsaw.tooltip.shift": "Press §eshift§r for more information!",
+  "tooltip.learningmod.chainsaw.tooltip.1": "This Chainsaw will cut down trees fast!",
+  "tooltip.learningmod.chainsaw.tooltip.2": "§oChainsaw go vroom!§r",
+
+  "tooltip.learningmod.lightsaber.tooltip.1": "May The Fourth Be With You",
+
+  "tooltip.learningmod.onion.tooltip.1": "Tastes Great, for an onion!",
+
+  "tooltip.learningmod.magic_block.tooltip.1": "This Block is §9MAGICAL§r",
+
+  "item.learningmod.metal_detector.no_valuables": "No Valuables Found!",
+
+  "name.learningmod.pedestal_be": "Pedestal",
+  "name.learningmod.crystallizer": "Crystallizer",
+
+  "entity.learningmod.giraffe": "Giraffe",
+  "entity.learningmod.fire_truck": "Fire Truck"
+
+
+}

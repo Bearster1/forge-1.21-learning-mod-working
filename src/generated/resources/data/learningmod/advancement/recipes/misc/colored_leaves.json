@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_balsa_leaves": {
+      "conditions": {
+        "items": [
+          {
+            "items": "learningmod:balsa_leaves"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "learningmod:colored_leaves"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_balsa_leaves"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "learningmod:colored_leaves"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "learningmod:block/stripped_balsa_wood_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "learningmod:block/stripped_balsa_wood"
+    },
+    "axis=z": {
+      "model": "learningmod:block/stripped_balsa_wood_horizontal",
+      "x": 90
+    }
+  }
+}

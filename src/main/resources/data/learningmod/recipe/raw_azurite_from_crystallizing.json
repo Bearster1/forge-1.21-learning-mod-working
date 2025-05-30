@@ -1,0 +1,10 @@
+{
+  "type": "learningmod:crystallizing",
+  "ingredient": {
+    "item": "learningmod:azurite"
+  },
+  "result": {
+    "id": "learningmod:raw_azurite",
+    "count": 1
+  }
+}

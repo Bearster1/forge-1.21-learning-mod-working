@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "learningmod:azurite"
+    },
+    "R": {
+      "item": "learningmod:radiation_staff"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ARA",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "learningmod:magic_block"
+  }
+}

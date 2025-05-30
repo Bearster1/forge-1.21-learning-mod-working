@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "learningmod:item/j0j0jetz_club_music_disc"
+  }
+}

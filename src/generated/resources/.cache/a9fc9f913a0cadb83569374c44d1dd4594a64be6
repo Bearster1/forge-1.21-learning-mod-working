@@ -1,0 +1,9 @@
+// 1.21.1	2025-05-30T16:23:41.4797204	Tags for minecraft:block mod id learningmod
+64ba52a0503fe733de3f3907b7f157cb0821a8e3 data/learningmod/tags/block/mineable/paxel.json
+2748468a6d9a11f71f1cf44759d748ad7b8dc82a data/minecraft/tags/block/fences.json
+9bcdb0d8b2048865df43eb9df48010196b4d4b8c data/minecraft/tags/block/fence_gates.json
+403e3c112a992d3dc42767bc4ea8a224c353a671 data/minecraft/tags/block/logs_that_burn.json
+1196453c4aced578b37e550f03513a1751ce6ff5 data/minecraft/tags/block/mineable/pickaxe.json
+09604447e698d2c7ac0646350d671a4cc63fbaaa data/minecraft/tags/block/needs_diamond_tool.json
+60a1e9aea12b86212c38a86cdc9610116c64f88a data/minecraft/tags/block/needs_iron_tool.json
+357b61e92ba070d3eb5868caa9ad7a09ff0ceee0 data/minecraft/tags/block/walls.json

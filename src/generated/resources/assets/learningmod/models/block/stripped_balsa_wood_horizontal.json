@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "learningmod:block/stripped_balsa_log",
+    "side": "learningmod:block/stripped_balsa_log"
+  }
+}

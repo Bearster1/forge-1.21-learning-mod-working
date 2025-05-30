@@ -1,0 +1,19 @@
+{
+  "values": [
+    "learningmod:azurite_block",
+    "learningmod:azurite_ore",
+    "learningmod:azurite_deepslate_ore",
+    "learningmod:azurite_end_ore",
+    "learningmod:azurite_nether_ore",
+    "learningmod:magic_block",
+    "learningmod:azurite_slab",
+    "learningmod:azurite_stairs",
+    "learningmod:azurite_button",
+    "learningmod:azurite_pressure_plate",
+    "learningmod:azurite_fence",
+    "learningmod:azurite_fence_gate",
+    "learningmod:azurite_wall",
+    "learningmod:azurite_door",
+    "learningmod:crystallizer"
+  ]
+}
