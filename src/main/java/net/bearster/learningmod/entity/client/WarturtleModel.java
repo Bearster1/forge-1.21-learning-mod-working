@@ -106,20 +106,18 @@ public class WarturtleModel<T extends WarturtleEntity> extends HierarchicalModel
         this.animate(entity.sitPoseAnimationState, WarturtleAnimations.ANIM_WARTURTLE_SITTING, ageInTicks, 1.0F);
         this.animate(entity.sitUpAnimationState, WarturtleAnimations.ANIM_WARTURTLE_EMERGE, ageInTicks, 1.0F);
 
-        tier1.visible = false;
-        tier2.visible = false;
-        tier3.visible = false;
+        tier1.visible = entity.hasTier1Chest();
+        tier2.visible = entity.hasTier2Chest();
+        tier3.visible = entity.hasTier3Chest();
     }
 
-    private void applyHeadRotation(float headYaw, float headPitch) {
-        headYaw = Mth.clamp(headYaw, -30f, 30f);
-        headPitch = Mth.clamp(headPitch, -25f, 45f);
+    private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch) {
+        pNetHeadYaw = Mth.clamp(pNetHeadYaw, -30.0F, 30.0F);
+        pHeadPitch = Mth.clamp(pHeadPitch, -25.0F, 45.0F);
 
-        this.head.xRot = headYaw * ((float)Math.PI / 180f);
-        this.head.yRot = headPitch * ((float)Math.PI / 180f);
-
+        this.head.yRot = pNetHeadYaw * ((float)Math.PI / 180F);
+        this.head.xRot = pHeadPitch * ((float)Math.PI / 180F);
     }
-
 
     @Override
     public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int color) {

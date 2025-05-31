@@ -19,6 +19,7 @@ import net.bearster.learningmod.screen.ModMenuTypes;
 import net.bearster.learningmod.screen.custom.CoalGeneratorScreen;
 import net.bearster.learningmod.screen.custom.CrystallizerScreen;
 import net.bearster.learningmod.screen.custom.PedestalScreen;
+import net.bearster.learningmod.screen.custom.WarturtleScreen;
 import net.bearster.learningmod.sound.ModSounds;
 import net.bearster.learningmod.util.ModItemProperties;
 import net.bearster.learningmod.villager.ModVillagers;
@@ -57,7 +58,7 @@ public class LearningMod
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "learningmod";
     // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
     public LearningMod(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
@@ -150,6 +151,8 @@ public class LearningMod
             MenuScreens.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
             MenuScreens.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
             MenuScreens.register(ModMenuTypes.COAL_GENERATOR_MENU.get(), CoalGeneratorScreen::new);
+
+            MenuScreens.register(ModMenuTypes.WARTURTLE_MENU.get(), WarturtleScreen::new);
 
             EntityRenderers.register(ModEntities.CAPYBARA.get(), CapybaraRenderer::new);
             EntityRenderers.register(ModEntities.FIREFIGHTER.get(), FirefighterRenderer::new);

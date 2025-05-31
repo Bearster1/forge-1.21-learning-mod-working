@@ -4,6 +4,7 @@ import net.bearster.learningmod.LearningMod;
 import net.bearster.learningmod.screen.custom.CoalGeneratorMenu;
 import net.bearster.learningmod.screen.custom.CrystallizerMenu;
 import net.bearster.learningmod.screen.custom.PedestalMenu;
+import net.bearster.learningmod.screen.custom.WarturtleMenu;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -25,6 +26,9 @@ public class ModMenuTypes {
 
     public static final RegistryObject<MenuType<CoalGeneratorMenu>> COAL_GENERATOR_MENU =
             registerMenuType("coal_generator_menu", CoalGeneratorMenu::new);
+
+    public static final RegistryObject<MenuType<WarturtleMenu>> WARTURTLE_MENU =
+            registerMenuType("war_turtle_menu", WarturtleMenu::create);
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerMenuType(String name,
                                                                                                  IContainerFactory<T> factory) {
