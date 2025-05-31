@@ -131,6 +131,10 @@ public class ModItems {
     public static final RegistryObject<Item> TOMAHAWK = ITEMS.register("tomahawk",
             () -> new TomahawkItem(new Item.Properties().stacksTo(16)));
 
+    public static final RegistryObject<Item> WARTURTLE_SPAWN_EGG = ITEMS.register("warturtle_spawn_egg",
+            () -> new ForgeSpawnEggItem(ModEntities.WARTURTLE, 0xdcca85, 0x3e352e,
+                    new Item.Properties()));
+
 
 
     public static void register(IEventBus eventBus) {

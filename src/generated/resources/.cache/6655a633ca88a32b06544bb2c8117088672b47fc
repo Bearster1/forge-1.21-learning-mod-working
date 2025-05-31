@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-30T16:23:41.4817259	Item Models: learningmod
+// 1.21.1	2025-05-31T16:16:52.3827711	Item Models: learningmod
 5f0a1583247330397ad1329d9a9e6bb9375f0014 assets/learningmod/models/item/aurora_ashes.json
 384bf21bae51b4d7e40ee43fc32c9bb223b004ca assets/learningmod/models/item/azurite.json
 7928a53323c8fcb5cb91ecce6685907e28f37d52 assets/learningmod/models/item/azurite_axe.json
@@ -74,3 +74,4 @@ ea25452166b3712e47fed49ae7898a90e19f4d56 assets/learningmod/models/item/lightsab
 cbbd89d8d438b5b79b2b8a4d2ffa5834f0929116 assets/learningmod/models/item/onion.json
 c5f7ef76e0ea8bb7cbae50e2a3495eed9ac8e7f0 assets/learningmod/models/item/onion_seeds.json
 c2f989c4161196c48adf1c8f678a6d9c5187d087 assets/learningmod/models/item/raw_azurite.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/learningmod/models/item/warturtle_spawn_egg.json

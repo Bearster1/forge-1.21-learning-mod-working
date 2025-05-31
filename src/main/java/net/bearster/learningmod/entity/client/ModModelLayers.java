@@ -19,4 +19,7 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation TOMAHAWK = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "tomahawk"), "main");
+
+    public static final ModelLayerLocation WARTURTLE = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "warturtle"), "main");
 }

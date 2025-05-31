@@ -33,6 +33,10 @@ public class ModEntities {
             ENTITY_TYPES.register("tomahawk", () -> EntityType.Builder.<TomahawkProjectileEntity>of(TomahawkProjectileEntity::new, MobCategory.MISC)
                     .sized(0.5f, 1.15f).build("tomahawk"));
 
+    public static final RegistryObject<EntityType<WarturtleEntity>> WARTURTLE =
+            ENTITY_TYPES.register("warturtle", () -> EntityType.Builder.of(WarturtleEntity::new, MobCategory.CREATURE)
+                    .sized(2.5f, 1.5f).build("warturtle"));
+
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);
     }

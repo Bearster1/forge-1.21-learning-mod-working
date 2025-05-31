@@ -67,6 +67,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CAPYBARA_SPAWN_EGG.get());
                         output.accept(ModItems.GIRAFFE_SPAWN_EGG.get());
 
+                        output.accept(ModItems.WARTURTLE_SPAWN_EGG.get());
+
                         output.accept(ModItems.TOMAHAWK.get());
 
                     }).build());

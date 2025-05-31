@@ -158,6 +158,8 @@ public class LearningMod
             EntityRenderers.register(ModEntities.FIRE_TRUCK.get(), FireTruckRenderer::new);
 
             EntityRenderers.register(ModEntities.TOMAHAWK.get(), TomahawkProjectileRenderer::new);
+
+            EntityRenderers.register(ModEntities.WARTURTLE.get(), WarturtleRenderer::new);
         }
 
         @SubscribeEvent

@@ -3,10 +3,7 @@ package net.bearster.learningmod.event;
 import net.bearster.learningmod.LearningMod;
 import net.bearster.learningmod.entity.ModEntities;
 import net.bearster.learningmod.entity.client.*;
-import net.bearster.learningmod.entity.custom.CapybaraEntity;
-import net.bearster.learningmod.entity.custom.FireTruckEntity;
-import net.bearster.learningmod.entity.custom.FirefighterEntity;
-import net.bearster.learningmod.entity.custom.GiraffeEntity;
+import net.bearster.learningmod.entity.custom.*;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.entity.animal.Animal;
@@ -27,6 +24,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(ModModelLayers.GIRAFFE, GiraffeModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.FIRE_TRUCK, FireTruckModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.WARTURTLE, WarturtleModel::createBodyLayer);
     }
 
     @SubscribeEvent
@@ -35,6 +33,7 @@ public class ModEventBusEvents {
         event.put(ModEntities.FIREFIGHTER.get(), FirefighterEntity.createAttributes().build());
         event.put(ModEntities.GIRAFFE.get(), GiraffeEntity.createAttributes().build());
         event.put(ModEntities.FIRE_TRUCK.get(), FireTruckEntity.createAttributes().build());
+        event.put(ModEntities.WARTURTLE.get(), WarturtleEntity.createAttributes().build());
     }
 
     @SubscribeEvent
@@ -43,6 +42,9 @@ public class ModEventBusEvents {
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
 
         event.register(ModEntities.GIRAFFE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+                Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
+
+        event.register(ModEntities.WARTURTLE.get(), SpawnPlacementTypes.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
                 Animal::checkAnimalSpawnRules, SpawnPlacementRegisterEvent.Operation.REPLACE);
     }
 
