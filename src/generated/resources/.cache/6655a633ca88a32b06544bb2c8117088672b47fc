@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-31T16:16:52.3827711	Item Models: learningmod
+// 1.21.1	2025-05-31T18:15:53.7369397	Item Models: learningmod
 5f0a1583247330397ad1329d9a9e6bb9375f0014 assets/learningmod/models/item/aurora_ashes.json
 384bf21bae51b4d7e40ee43fc32c9bb223b004ca assets/learningmod/models/item/azurite.json
 7928a53323c8fcb5cb91ecce6685907e28f37d52 assets/learningmod/models/item/azurite_axe.json
@@ -57,6 +57,7 @@ c64d290482e7acdb8a97598e9aeee634e425c715 assets/learningmod/models/item/azurite_
 f1df472b5048526d110a6b0ad0ddcb2d06479c87 assets/learningmod/models/item/azurite_shovel.json
 846e49e107679950d1c347dc0e3048f1b661ce07 assets/learningmod/models/item/azurite_sword.json
 c907573e16fc27b9e6de6827b56489f1aa265f5f assets/learningmod/models/item/azurite_wall.json
+78c8275727df66f2bc614038ace4d5537557a710 assets/learningmod/models/item/azurite_warturtle_armor.json
 c9fd73df56abf31d7037d93d339f3410dd849c74 assets/learningmod/models/item/azurite_water_bucket.json
 7ea444e502eab3740214081ab1d040cf0b85c58f assets/learningmod/models/item/balsa_sapling.json
 c9e995885e83e0cef29fd433c29ee3d54f361f56 assets/learningmod/models/item/bar_brawl_music_disc.json
@@ -64,13 +65,17 @@ c9e995885e83e0cef29fd433c29ee3d54f361f56 assets/learningmod/models/item/bar_braw
 3dce10d0f4c96dabe4ee57754f889ac91ea059a9 assets/learningmod/models/item/catmint.json
 8f09b29e8d19d75fa53a4b94d0e60d3218dd34da assets/learningmod/models/item/chainsaw.json
 741ed36f06cca7943aa4a024d3fba5a142f06138 assets/learningmod/models/item/crystallizer.json
+7d0fd65929be597e90b67993fcdec20aed497188 assets/learningmod/models/item/diamond_warturtle_armor.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/learningmod/models/item/firefighter_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/learningmod/models/item/fire_truck_spawn_egg.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/learningmod/models/item/giraffe_spawn_egg.json
+e0ccf36d988a98adc40c6b995b5979e9aafb34ac assets/learningmod/models/item/gold_warturtle_armor.json
+86de9d56255fc80e63103318f290c267f06dbb7c assets/learningmod/models/item/iron_warturtle_armor.json
 ca53a7ae2b6f8347e6574742693c34e233f606fb assets/learningmod/models/item/j0j0jetz_club_music_disc.json
 f8c4f30e4a04b5fd10aed4eaf7c53a93d286b8dc assets/learningmod/models/item/kaupen_armor_trim_smithing_template.json
 ea25452166b3712e47fed49ae7898a90e19f4d56 assets/learningmod/models/item/lightsaber.json
 42d8a6219a3dfc259a1d549b7c59ab95b1fd2042 assets/learningmod/models/item/metal_detector.json
+9f7f3021c93efa864d983a1986aeb5677655476e assets/learningmod/models/item/netherite_warturtle_armor.json
 cbbd89d8d438b5b79b2b8a4d2ffa5834f0929116 assets/learningmod/models/item/onion.json
 c5f7ef76e0ea8bb7cbae50e2a3495eed9ac8e7f0 assets/learningmod/models/item/onion_seeds.json
 c2f989c4161196c48adf1c8f678a6d9c5187d087 assets/learningmod/models/item/raw_azurite.json

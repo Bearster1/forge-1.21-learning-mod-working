@@ -3,6 +3,7 @@ package net.bearster.learningmod.entity.custom;
 import net.bearster.learningmod.LearningMod;
 import net.bearster.learningmod.entity.ModEntities;
 import net.bearster.learningmod.item.ModItems;
+import net.bearster.learningmod.item.custom.WarturtleArmorItem;
 import net.bearster.learningmod.screen.custom.WarturtleMenu;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
@@ -12,19 +13,25 @@ import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.tags.DamageTypeTags;
+import net.minecraft.util.Mth;
 import net.minecraft.world.*;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WoolCarpetBlock;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraftforge.event.ForgeEventFactory;
 import org.jetbrains.annotations.Nullable;
@@ -46,6 +53,10 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
             SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
     private static final EntityDataAccessor<Boolean> HAS_TIER_3_CHEST =
             SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.BOOLEAN);
+
+    private static final EntityDataAccessor<ItemStack> DYE_STACK =
+            SynchedEntityData.defineId(WarturtleEntity.class, EntityDataSerializers.ITEM_STACK);
+
 
     protected SimpleContainer inventory;
 
@@ -204,6 +215,8 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
         pBuilder.define(HAS_TIER_1_CHEST, false);
         pBuilder.define(HAS_TIER_2_CHEST, false);
         pBuilder.define(HAS_TIER_3_CHEST, false);
+
+        pBuilder.define(DYE_STACK, ItemStack.EMPTY);
     }
 
     @Override
@@ -308,6 +321,20 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
             setChest(TIER_3_CHEST_SLOT, false);
             dropChestInventory(TIER_3_CHEST_SLOT);
         }
+
+        if(container.getItem(0).getItem() instanceof WarturtleArmorItem) {
+            setBodyArmorItem(container.getItem(0));
+        }
+        if(container.getItem(0).isEmpty() && isWearingBodyArmor()) {
+            setBodyArmorItem(ItemStack.EMPTY);
+        }
+
+        if(!container.getItem(1).isEmpty()) {
+            this.entityData.set(DYE_STACK, container.getItem(1));
+        }
+        if(container.getItem(1).isEmpty()) {
+            this.entityData.set(DYE_STACK, ItemStack.EMPTY);
+        }
     }
 
     private void dropChestInventory(int slot) {
@@ -400,5 +427,42 @@ public class WarturtleEntity extends TamableAnimal implements ContainerListener,
                 buf.writeUUID(getUUID());
             });
         }
+    }
+
+    /* ARMOR */
+    @Override
+    protected void actuallyHurt(DamageSource damageSource, float damageAmount) {
+        if (!this.canArmorAbsorb(damageSource)) {
+            super.actuallyHurt(damageSource, damageAmount);
+        } else {
+            ItemStack itemstack = this.getBodyArmorItem();
+            itemstack.hurtAndBreak(Mth.ceil(damageAmount), this, EquipmentSlot.BODY);
+
+            if(itemstack.getItem() instanceof WarturtleArmorItem warturtleArmorItem) {
+                int damagereducton = warturtleArmorItem.getDefense() / 2; // depends on what armor
+                super.actuallyHurt(damageSource, Math.max(0, damageAmount - damagereducton));
+            }
+        }
+    }
+
+    private boolean canArmorAbsorb(DamageSource damageSource) {
+        return this.hasArmorOn() && !damageSource.is(DamageTypeTags.BYPASSES_WOLF_ARMOR);
+    }
+
+    public boolean hasArmorOn() {
+        return isWearingBodyArmor();
+    }
+
+
+    /* DYEABLE */
+    @Nullable
+    private static DyeColor getDyeColor(ItemStack stack) {
+        Block block = Block.byItem(stack.getItem());
+        return block instanceof WoolCarpetBlock ? ((WoolCarpetBlock)block).getColor() : null;
+    }
+
+    @Nullable
+    public DyeColor getSwag() {
+        return getDyeColor(this.entityData.get(DYE_STACK));
     }
 }

@@ -4,17 +4,27 @@ import net.bearster.learningmod.block.ModBlocks;
 import net.bearster.learningmod.entity.ModEntities;
 import net.bearster.learningmod.entity.client.CapybaraVariant;
 import net.bearster.learningmod.item.ModItems;
+import net.bearster.learningmod.sound.ModSounds;
 import net.minecraft.Util;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.inventory.InventoryScreen;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.player.Player;
@@ -23,6 +33,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.CommandBlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.Nullable;
@@ -45,7 +56,7 @@ public class FireTruckEntity extends AbstractHorse {
 
     @Override
     public boolean isFood(ItemStack itemStack) {
-        return itemStack.is(ModBlocks.TRIFORCE.get().asItem());
+        return itemStack.isEmpty();
     }
 
     @Override
@@ -97,7 +108,7 @@ public class FireTruckEntity extends AbstractHorse {
 
             return super.mobInteract(pPlayer, pHand);
         } else {
-            return super.mobInteract(pPlayer, pHand);
+            return InteractionResult.sidedSuccess(this.level().isClientSide);
         }
     }
 
@@ -110,9 +121,76 @@ public class FireTruckEntity extends AbstractHorse {
 
     @Override
     public SpawnGroupData finalizeSpawn(ServerLevelAccessor pLevel, DifficultyInstance pDifficulty, MobSpawnType pSpawnType, @Nullable SpawnGroupData pSpawnGroupData) {
-        this.setTamed(true);
-        this.equipSaddle(Items.SADDLE.getDefaultInstance(), SoundSource.PLAYERS);
 
         return super.finalizeSpawn(pLevel, pDifficulty, pSpawnType, pSpawnGroupData);
+    }
+
+    @Override
+    public boolean isSaddled() {
+        return true;
+    }
+
+    @Override
+    public boolean isTamed() {
+        return true;
+    }
+
+
+    @Override
+    protected void playStepSound(BlockPos pPos, BlockState pBlock) {
+
+    }
+
+    @Override
+    public void openCustomInventoryScreen(Player pPlayer) {
+        
+    }
+
+    @Override
+    public @Nullable SoundEvent getAmbientStandSound() {
+        return null;
+    }
+
+    @Override
+    protected void executeRidersJump(float pPlayerJumpPendingScale, Vec3 pTravelVector) {
+
+    }
+
+    @Override
+    public boolean canJump() {
+        return false;
+    }
+
+    @Override
+    public boolean causeFallDamage(float pFallDistance, float pMultiplier, DamageSource pSource) {
+        var event = net.minecraftforge.event.ForgeEventFactory.onLivingFall(this, pFallDistance, pMultiplier);
+        if (event.isCanceled()) return false;
+        pFallDistance = event.getDistance();
+        pMultiplier = event.getDamageMultiplier();
+
+        int i = this.calculateFallDamage(pFallDistance, pMultiplier);
+        if (i <= 0) {
+            return false;
+        } else {
+            this.hurt(pSource, (float)i);
+            if (this.isVehicle()) {
+                for (Entity entity : this.getIndirectPassengers()) {
+                    entity.hurt(pSource, (float)i);
+                }
+            }
+
+            this.playBlockFallSound();
+            return true;
+        }
+    }
+
+    @Override
+    protected void registerGoals() {
+        this.addBehaviourGoals();
+    }
+
+    @Override
+    protected void addBehaviourGoals() {
+
     }
 }

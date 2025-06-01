@@ -25,6 +25,7 @@ public class ModEventBusEvents {
         event.registerLayerDefinition(ModModelLayers.FIRE_TRUCK, FireTruckModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.TOMAHAWK, TomahawkProjectileModel::createBodyLayer);
         event.registerLayerDefinition(ModModelLayers.WARTURTLE, WarturtleModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayers.WARTURTLE_ARMOR, WarturtleModel::createBodyLayer);
     }
 
     @SubscribeEvent

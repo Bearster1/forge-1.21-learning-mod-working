@@ -51,6 +51,12 @@
 
   "item.learningmod.warturtle_spawn_egg": "Warturtle Spawn Egg",
 
+  "item.learningmod.iron_warturtle_armor": "Iron Warturtle Armor",
+  "item.learningmod.gold_warturtle_armor": "Gold Warturtle Armor",
+  "item.learningmod.azurite_warturtle_armor": "Azurite Warturtle Armor",
+  "item.learningmod.diamond_warturtle_armor": "Diamond Warturtle Armor",
+  "item.learningmod.netherite_warturtle_armor": "Netherite Warturtle Armor",
+
   "item.minecraft.potion.effect.slimey_potion": "Slimey Potion",
   "item.minecraft.splash_potion.effect.slimey_potion": "Slimey Splash Potion",
   "item.minecraft.lingering_potion.effect.slimey_potion": "Slimey Lingering Potion",

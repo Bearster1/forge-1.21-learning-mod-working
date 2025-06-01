@@ -1,6 +1,7 @@
 package net.bearster.learningmod.screen.custom;
 
 import net.bearster.learningmod.entity.custom.WarturtleEntity;
+import net.bearster.learningmod.item.custom.WarturtleArmorItem;
 import net.bearster.learningmod.screen.ModMenuTypes;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 
@@ -12,6 +13,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.WoolCarpetBlock;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -35,8 +39,25 @@ public class WarturtleMenu extends AbstractContainerMenu {
         this.warturtle = warturtleEntity;
         warturtleContainer.startOpen(inventory.player);
 
-        this.addSlot(new Slot(warturtleContainer, 0, 8, 63));  // Armor Slot
-        this.addSlot(new Slot(warturtleContainer, 1, 44, 63)); // Dye Slot
+        // Armor Slot
+        this.addSlot(new Slot(warturtleContainer, 0, 8, 63) {
+            @Override
+            public boolean mayPlace(ItemStack pStack) {
+                return pStack.getItem() instanceof WarturtleArmorItem;
+            }
+        });
+        // Dye Slot
+        this.addSlot(new Slot(warturtleContainer, 1, 44, 63) {
+            @Override
+            public boolean mayPlace(ItemStack pStack) {
+                return warturtleEntity.hasArmorOn() && Block.byItem(pStack.getItem()) instanceof WoolCarpetBlock;
+            }
+
+            @Override
+            public int getMaxStackSize() {
+                return 1;
+            }
+        });
 
         // Chest Slot Tier 1
         this.addSlot(new Slot(warturtleContainer, 2, 72, 27) {
@@ -188,7 +209,7 @@ public class WarturtleMenu extends AbstractContainerMenu {
         return itemstack;
     }
 
-    /**Add commentMore actions
+    /**
      * Called when the container is closed.
      */
     @Override

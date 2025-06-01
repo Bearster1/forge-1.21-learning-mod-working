@@ -22,4 +22,6 @@ public class ModModelLayers {
 
     public static final ModelLayerLocation WARTURTLE = new ModelLayerLocation(
             ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "warturtle"), "main");
+    public static final ModelLayerLocation WARTURTLE_ARMOR = new ModelLayerLocation(
+            ResourceLocation.fromNamespaceAndPath(LearningMod.MOD_ID, "warturtle_armor"), "armor");
 }

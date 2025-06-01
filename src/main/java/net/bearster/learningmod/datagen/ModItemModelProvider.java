@@ -105,6 +105,13 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(ModItems.FIRE_TRUCK_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
 
         withExistingParent(ModItems.WARTURTLE_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
+        basicItem(ModItems.IRON_WARTURTLE_ARMOR.get());
+        basicItem(ModItems.GOLD_WARTURTLE_ARMOR.get());
+        basicItem(ModItems.AZURITE_WARTURTLE_ARMOR.get());
+        basicItem(ModItems.DIAMOND_WARTURTLE_ARMOR.get());
+        basicItem(ModItems.NETHERITE_WARTURTLE_ARMOR.get());
+
     }
 
     private ItemModelBuilder saplingItem(RegistryObject<Block> item) {

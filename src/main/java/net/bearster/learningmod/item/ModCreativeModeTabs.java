@@ -71,6 +71,12 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.TOMAHAWK.get());
 
+                        output.accept(ModItems.IRON_WARTURTLE_ARMOR.get());
+                        output.accept(ModItems.GOLD_WARTURTLE_ARMOR.get());
+                        output.accept(ModItems.AZURITE_WARTURTLE_ARMOR.get());
+                        output.accept(ModItems.DIAMOND_WARTURTLE_ARMOR.get());
+                        output.accept(ModItems.NETHERITE_WARTURTLE_ARMOR.get());
+
                     }).build());
 
     public static final RegistryObject<CreativeModeTab> AZURITE_BLOCKS_TAB = CREATIVE_MODE_TABS.register("azurite_blocks_tab",

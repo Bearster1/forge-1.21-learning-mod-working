@@ -135,6 +135,17 @@ public class ModItems {
             () -> new ForgeSpawnEggItem(ModEntities.WARTURTLE, 0xdcca85, 0x3e352e,
                     new Item.Properties()));
 
+    public static final RegistryObject<Item> IRON_WARTURTLE_ARMOR = ITEMS.register("iron_warturtle_armor",
+            () -> new WarturtleArmorItem(ArmorMaterials.IRON, new Item.Properties().durability(200)));
+    public static final RegistryObject<Item> GOLD_WARTURTLE_ARMOR = ITEMS.register("gold_warturtle_armor",
+            () -> new WarturtleArmorItem(ArmorMaterials.GOLD, new Item.Properties().durability(400)));
+    public static final RegistryObject<Item> DIAMOND_WARTURTLE_ARMOR = ITEMS.register("diamond_warturtle_armor",
+            () -> new WarturtleArmorItem(ArmorMaterials.DIAMOND, new Item.Properties().durability(600)));
+    public static final RegistryObject<Item> NETHERITE_WARTURTLE_ARMOR = ITEMS.register("netherite_warturtle_armor",
+            () -> new WarturtleArmorItem(ArmorMaterials.NETHERITE, new Item.Properties().durability(800)));
+    public static final RegistryObject<Item> AZURITE_WARTURTLE_ARMOR = ITEMS.register("azurite_warturtle_armor",
+            () -> new WarturtleArmorItem(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, new Item.Properties().durability(1000)));
+
 
 
     public static void register(IEventBus eventBus) {

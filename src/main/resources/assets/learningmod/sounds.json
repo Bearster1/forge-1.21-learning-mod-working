@@ -49,7 +49,7 @@
   },
 
   "firefighter": {
-    "subtitle": "learningmod.firefighter",
+    "subtitle": "sounds.learningmod.firefighter",
     "sounds": [
       "learningmod:firefighter"
     ]
